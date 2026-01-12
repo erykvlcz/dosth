@@ -25,5 +25,7 @@ public class Runner {
 
         carService.addCarToCarsList(carsArray);
 
+        System.out.println(carService);
+
     }
 }

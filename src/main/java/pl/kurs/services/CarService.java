@@ -12,4 +12,11 @@ public class CarService {
     public void addCarToCarsList(Car... newCars){
         Arrays.stream(newCars).filter(c -> c != null).forEach(c -> cars.add(c));
     }
+
+    @Override
+    public String toString() {
+        return "CarService{" +
+                "cars=" + cars +
+                '}';
+    }
 }
