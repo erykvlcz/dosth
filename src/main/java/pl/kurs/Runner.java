@@ -17,12 +17,15 @@ public class Runner {
 
         CarService carService = new CarService();
 
-        List<Car> carList = new ArrayList<>(List.of(
+        Car[] carsArray = {
                 new Car("Honda Civic TypeR"),
                 new Car("Dodge Durango R/T"),
                 new Car("Alfa Romeo 159"),
-                new Car("Audi S5")
-        ));
+                new Car("Audi S5")};
+
+        carService.addCarToCarsList(carsArray);
+
+        System.out.println(carService);
 
     }
 }
