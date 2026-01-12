@@ -1,7 +1,10 @@
 package pl.kurs;
 
 import pl.kurs.models.Car;
+import pl.kurs.services.CarService;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class Runner {
@@ -11,6 +14,15 @@ public class Runner {
         Optional<Car> carOptional = Optional.of(c1);
         Car car = carOptional.orElse(new Car("Citoren Saxo"));
         System.out.println(car);
+
+        CarService carService = new CarService();
+
+        List<Car> carList = new ArrayList<>(List.of(
+                new Car("Honda Civic TypeR"),
+                new Car("Dodge Durango R/T"),
+                new Car("Alfa Romeo 159"),
+                new Car("Audi S5")
+        ));
 
     }
 }
